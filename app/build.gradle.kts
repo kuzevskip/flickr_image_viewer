@@ -65,4 +65,9 @@ dependencies {
     kapt(libs.dagger.hilt.compiler)
     //implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.retrofit)
+    implementation(libs.converter.moshi)
+
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
 }
