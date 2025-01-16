@@ -1,6 +1,5 @@
 package com.example.search.presentation
 
-import android.content.Context
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -38,9 +37,9 @@ class SearchViewModel @Inject constructor(
     }
 
     private fun executeSearch() {
-        // ToDo:
         viewModelScope.launch {
-            repository.search()
+            val images = repository.search(state.query)
+            state = state.copy(images = images)
         }
     }
 }
